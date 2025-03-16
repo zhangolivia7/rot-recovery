@@ -68,3 +68,8 @@ h1 {
   flex-direction: column;
   margin: 10px;
 }
+
+#input {
+  width: 30em;
+  padding: 0px 20px;
+}

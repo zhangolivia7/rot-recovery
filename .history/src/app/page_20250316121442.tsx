@@ -1,5 +1,5 @@
 'use client'
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -9,10 +9,10 @@ export default function Home() {
   const [schedule, setSchedule] = useState<string>(""); //store groqAPI response
   const [loading, setLoading] = useState<boolean>(false);
 
-  // // Update name
-  // const updateName = () => {
-  //   setName(document.getElementById('helloText'));
-  // }
+  // Update name
+  function updateName(name) {
+    setName(name.target.value);
+  }
 
   // Update task text
   const updateTaskText = (id: number, text: string) => {
@@ -73,7 +73,7 @@ export default function Home() {
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <div>
             <h1>
-              hello, <input type="text" id="helloText"/>
+              hello, <input type="text" id="helloText" onChange={updateName}/>
             </h1>
           </div>
         </main>

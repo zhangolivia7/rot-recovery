@@ -62,9 +62,3 @@ h1 {
   flex-direction: column;
   gap: 30px;
 }
-
-#form {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}
