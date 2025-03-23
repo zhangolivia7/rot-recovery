@@ -87,8 +87,8 @@ export default function Home() {
             <div id="sec2" className="w-full h-full flex flex-col justify-start items-center pt-0">
               {name.toLowerCase() === "leslie" ? (
                 // Special SVG for Leslie
-                <svg width="724" height="509" viewBox="0 0 724 509" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M495 354.5C491.4 354.5 469.167 355.833 458.5 356.5L460 359L528.5 363L525.5 359C516.833 357.5 498.6 354.5 495 354.5Z" fill="#88D0C7" />
+                <svg className="absolute top-0 left-0 w-full h-auto" viewBox="0 0 724 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M495 354.5C491.4 354.5 469.167 355.833 458.5 356.5L460 359L528.5 363L525.5 359C516.833 357.5 498.6 354.5 495 354.5Z" fill="#88D0C7" />
                   <path d="M558 413L503.5 434.5L547 451L586 425L558 413Z" fill="#8A8585" />
                   <circle cx="545.624" cy="378" r="25" fill="#FFE1A8" />
                   <path d="M336.624 363C375.024 348.6 487.291 357 538.624 363L542.624 397C534.624 399.667 512.224 405.4 486.624 407C461.024 408.6 347.957 445 294.624 463C271.124 474.333 212.524 497 166.124 497C108.124 497 48.1241 453 50.1241 463C51.7241 471 30.7908 497 20.1241 509C12.7908 504.333 -1.4759 491.8 0.124102 479C1.7241 466.2 26.1241 437.667 38.1241 425L156.124 449C144.791 428.333 128.924 382.2 156.124 363C190.124 339 288.624 381 336.624 363Z" fill="#FFE1A8" />

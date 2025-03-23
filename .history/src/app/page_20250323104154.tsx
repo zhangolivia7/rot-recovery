@@ -99,6 +99,7 @@ export default function Home() {
                   <path d="M531.5 350L529 360.5L526 362L527.5 348L531.5 350Z" fill="#9C4066" />
                   <path d="M543 411.5L530 397.5V397L525.5 397.5L535 408.5L531 409.5L534 411.5H543Z" fill="#9C4066" />
                 </svg>
+
               ) : (
                 // Default SVG
                 <svg width="724" height="509" viewBox="0 0 724 509" fill="none" xmlns="http://www.w3.org/2000/svg">
