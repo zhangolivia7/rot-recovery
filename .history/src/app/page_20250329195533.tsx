@@ -251,8 +251,8 @@ export default function Home() {
                 )}
               </div>
               <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
+  dev by olivia
+</p>
             </section>
           )}
         </>

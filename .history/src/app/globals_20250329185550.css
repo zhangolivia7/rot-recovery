@@ -71,25 +71,6 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  color: var(--background);
-}
-
-#doneButton {
-  border: 1px solid var(--foreground);
-  background-color: var(--background);
-  color: var(--foreground);
-  border-radius: 20px;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#doneButton:hover {
-  cursor: pointer;
-  border: 1px solid var(--background);
-  color: var(--background);
-  background-color: var(--foreground);
-
 }
 
 #s1 h1 {
@@ -99,12 +80,4 @@ h1 {
 
 #s1 input {
   font-weight: 100;
-}
-
-#schedule {
-  color: var(--foreground);
-}
-
-#taskInput {
-  border-radius: 0px;
 }

@@ -172,7 +172,7 @@ export default function Home() {
 
               {/* Timeframe Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Timeframe (e.g., 2 hours)"
                 value={timeframe}
                 onChange={(e) => setTimeframe(e.target.value)}
@@ -185,7 +185,6 @@ export default function Home() {
                   {tasks.map(task => (
                     <li key={task.id} className="flex items-center space-x-2">
                       <input
-                        id="taskInput"
                         type="text"
                         value={task.text}
                         onChange={(e) => updateTaskText(task.id, e.target.value)}
@@ -201,7 +200,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -210,9 +209,8 @@ export default function Home() {
 
               {/* Submit Button */}
               <button
-                id="doneButton"
                 onClick={handleSubmit}
-                className="mt-4 p-2"
+                className="mt-4 p-2 rounded-md"
               >
                 {loading ? "Generating..." : "That's It"}
               </button>
@@ -239,7 +237,7 @@ export default function Home() {
                 </svg>
               </div>
 
-              <div id="schedule" className="text-center max-w-xl z-10">
+              <div id="schedule" className="text-center max-w-xl">
                 <h1 className="text-3xl mb-4">your schedule</h1>
                 {loading ? (
                   <p className="text-lg">Generating your schedule...</p>
@@ -250,9 +248,6 @@ export default function Home() {
                   />
                 )}
               </div>
-              <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
             </section>
           )}
         </>

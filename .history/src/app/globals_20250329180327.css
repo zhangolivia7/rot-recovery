@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+:root {
+  --background: #303036;
+  --foreground: #f1e4cc;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -8,12 +12,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-shrikhand: 'Shrikhand', cursive;
-  --font-Lalezar: 'Shanti', normal;
-}
-
-:root {
-  --background: #303036;
-  --foreground: #f1e4cc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +44,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Shanti";
+  font-family: 'Lexend', sans-serif;
 }
 
 h1 {
@@ -54,7 +52,7 @@ h1 {
 }
 
 #helloText {
-  border-bottom: 3px solid var(--background);
+  border-bottom: 2px solid var(--background);
 }
 
 #helloText:focus {
@@ -71,40 +69,8 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  color: var(--background);
-}
-
-#doneButton {
-  border: 1px solid var(--foreground);
-  background-color: var(--background);
-  color: var(--foreground);
-  border-radius: 20px;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#doneButton:hover {
-  cursor: pointer;
-  border: 1px solid var(--background);
-  color: var(--background);
-  background-color: var(--foreground);
-
 }
 
 #s1 h1 {
   color: var(--background);
-  font-family: var(--font-shrikhand);
-}
-
-#s1 input {
-  font-weight: 100;
-}
-
-#schedule {
-  color: var(--foreground);
-}
-
-#taskInput {
-  border-radius: 0px;
 }

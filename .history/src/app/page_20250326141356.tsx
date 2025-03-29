@@ -1,7 +1,5 @@
 'use client'
 import { SetStateAction, useState } from "react";
-import { useWindowSize } from 'react-use';
-import Confetti from 'react-confetti-boom';
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -80,38 +78,19 @@ export default function Home() {
   return (
     <div className={`h-screen snap-y snap-mandatory ${name.trim() === "" ? "overflow-hidden" : "overflow-y-scroll"}`}>
       {/* Section 1 */}
-      <section id="sec1" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
-        {/* SVG Background with exact 10px margin on all sides */}
-        <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[20px] z-0">
-          <svg
-            viewBox="0 0 1382 961"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <path d="M0 35C0 15.6701 15.67 0 35 0H1347C1366.33 0 1382 15.67 1382 35V875H0V35Z" fill="#FFE1A8" />
-            <circle cx="86.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="259.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="432.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="605.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="778.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="951.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="1124.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="1295.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-          </svg>
-        </div>
+      <section id="sec1" className="h-screen flex justify-center items-center snap-start">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+          <div>
+            <svg width="1523" height="1089" viewBox="0 0 1523 1089" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M189.646 363.552C132.076 438.396 64.667 758.059 0 1000L22.3857 1071L1506.76 1089C1515.14 1076.5 1529.41 1046.81 1519.34 1028.01C1506.76 1004.52 1401.37 230.209 1293.35 86.2438C1185.34 -57.7212 1072.61 10.6378 993.439 62.2496C945.639 93.4101 836.141 246.205 765.357 261.701C694.573 277.197 544.312 200.592 436.08 200.592C318.106 200.592 253.53 280.5 189.646 363.552Z" fill="#FFE1A8" />
+            </svg>
 
-        {/* Foreground content */}
-        <main className="z-10 flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-          <div id="s1">
             <h1>
               hello, <input type="text" id="helloText" value={name} onChange={updateName} />
             </h1>
           </div>
         </main>
       </section>
-
 
       {name.trim() !== "" && (
         <>
@@ -147,32 +126,13 @@ export default function Home() {
           </section>
 
           {/* Section 3 */}
-          <section className="h-screen flex flex-col items-center justify-center snap-start relative overflow-hidden">
-            <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[0px] z-0">
-              <svg
-                viewBox="0 0 1382 997"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full"
-                preserveAspectRatio="none"
-              >
-                <rect x="1382" y="997" width="1382" height="907.778" transform="rotate(-180 1382 997)" fill="#FFE1A8" />
-                <ellipse cx="1295.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 1295.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="1122.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 1122.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="949.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 949.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="776.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 776.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="603.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 603.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="430.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 430.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="257.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 257.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="86.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 86.5 89.7403)" fill="#FFE1A8" />
-              </svg>
-            </div>
-            <div id="form" className="z-10">
+          <section className="h-screen flex flex-col items-center justify-center snap-start">
+            <div id="form">
               <h1 className="text-3xl">let's get back on track, {name}</h1>
 
               {/* Timeframe Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Timeframe (e.g., 2 hours)"
                 value={timeframe}
                 onChange={(e) => setTimeframe(e.target.value)}
@@ -185,7 +145,6 @@ export default function Home() {
                   {tasks.map(task => (
                     <li key={task.id} className="flex items-center space-x-2">
                       <input
-                        id="taskInput"
                         type="text"
                         value={task.text}
                         onChange={(e) => updateTaskText(task.id, e.target.value)}
@@ -201,7 +160,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -210,9 +169,8 @@ export default function Home() {
 
               {/* Submit Button */}
               <button
-                id="doneButton"
                 onClick={handleSubmit}
-                className="mt-4 p-2"
+                className="mt-4 p-2 rounded-md"
               >
                 {loading ? "Generating..." : "That's It"}
               </button>
@@ -220,41 +178,16 @@ export default function Home() {
           </section>
 
           {/* Next Section - Display Schedule */}
-          {schedule && (
-            <section id="next-section" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
-              {/* Background SVG (no top margin) */}
-              <div className="absolute top-0 left-[20px] right-[20px] bottom-0 z-0">
-                <svg
-                  viewBox="0 0 1382 1004"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                  preserveAspectRatio="none"
-                >
-                  <rect width="1382" height="788" fill="#FFE1A8" />
-                  <path
-                    d="M1382 782C1382 1213.89 1154.63 882.5 773 882.5C391.371 882.5 0 1213.89 0 782C0 350.113 309.371 0 691 0C1072.63 0 1382 350.113 1382 782Z"
-                    fill="#303036"
-                  />
-                </svg>
-              </div>
-
-              <div id="schedule" className="text-center max-w-xl z-10">
-                <h1 className="text-3xl mb-4">your schedule</h1>
-                {loading ? (
-                  <p className="text-lg">Generating your schedule...</p>
-                ) : (
-                  <p
-                    className="whitespace-pre-wrap"
-                    dangerouslySetInnerHTML={{ __html: schedule || "Your schedule will appear here." }}
-                  />
-                )}
-              </div>
-              <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
-            </section>
-          )}
+          <section id="next-section" className="h-screen flex justify-center items-center snap-start">
+            <div className="text-center max-w-xl">
+              <h1 className="text-3xl mb-4">your schedule</h1>
+              {loading ? (
+                <p className="text-lg">Generating your schedule...</p>
+              ) : (
+                <p className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: schedule || "Your schedule will appear here." }}></p>
+              )}
+            </div>
+          </section>
         </>
       )}
     </div>

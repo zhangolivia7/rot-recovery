@@ -75,9 +75,9 @@ h1 {
 }
 
 #doneButton {
-  border: 1px solid var(--foreground);
   background-color: var(--background);
   color: var(--foreground);
+  /* border: 1px solid var(--background); */
   border-radius: 20px;
   width: 20%;
   margin-left: auto;
@@ -86,10 +86,6 @@ h1 {
 
 #doneButton:hover {
   cursor: pointer;
-  border: 1px solid var(--background);
-  color: var(--background);
-  background-color: var(--foreground);
-
 }
 
 #s1 h1 {
@@ -102,7 +98,7 @@ h1 {
 }
 
 #schedule {
-  color: var(--foreground);
+  color :var(--foreground);
 }
 
 #taskInput {

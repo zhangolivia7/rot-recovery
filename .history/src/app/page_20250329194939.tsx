@@ -201,7 +201,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -250,9 +250,6 @@ export default function Home() {
                   />
                 )}
               </div>
-              <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
             </section>
           )}
         </>

@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* Section 3 */}
           <section className="h-screen flex flex-col items-center justify-center snap-start relative overflow-hidden">
-            <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[0px] z-0">
+            <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[10px] z-0">
               <svg
                 viewBox="0 0 1382 997"
                 fill="none"
@@ -172,7 +172,7 @@ export default function Home() {
 
               {/* Timeframe Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Timeframe (e.g., 2 hours)"
                 value={timeframe}
                 onChange={(e) => setTimeframe(e.target.value)}
@@ -185,7 +185,6 @@ export default function Home() {
                   {tasks.map(task => (
                     <li key={task.id} className="flex items-center space-x-2">
                       <input
-                        id="taskInput"
                         type="text"
                         value={task.text}
                         onChange={(e) => updateTaskText(task.id, e.target.value)}
@@ -201,7 +200,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -210,9 +209,8 @@ export default function Home() {
 
               {/* Submit Button */}
               <button
-                id="doneButton"
                 onClick={handleSubmit}
-                className="mt-4 p-2"
+                className="mt-4 p-2 rounded-md"
               >
                 {loading ? "Generating..." : "That's It"}
               </button>
@@ -223,7 +221,7 @@ export default function Home() {
           {schedule && (
             <section id="next-section" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
               {/* Background SVG (no top margin) */}
-              <div className="absolute top-0 left-[20px] right-[20px] bottom-0 z-0">
+              <div className="absolute top-0 left-10px right-10px bottom-0 z-0">
                 <svg
                   viewBox="0 0 1382 1004"
                   fill="none"
@@ -239,7 +237,7 @@ export default function Home() {
                 </svg>
               </div>
 
-              <div id="schedule" className="text-center max-w-xl z-10">
+              <div className="text-center max-w-xl">
                 <h1 className="text-3xl mb-4">your schedule</h1>
                 {loading ? (
                   <p className="text-lg">Generating your schedule...</p>
@@ -250,9 +248,6 @@ export default function Home() {
                   />
                 )}
               </div>
-              <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
             </section>
           )}
         </>

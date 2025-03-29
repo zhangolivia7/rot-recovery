@@ -1,7 +1,5 @@
 'use client'
 import { SetStateAction, useState } from "react";
-import { useWindowSize } from 'react-use';
-import Confetti from 'react-confetti-boom';
 
 export default function Home() {
   const [name, setName] = useState("");
@@ -49,12 +47,12 @@ export default function Home() {
 
     if (name.toLowerCase() === "leslie") {
       prompt = `ALWAYS USE <b> IF YOU NEED TO BOLD YOUR RESPONSES!!! DO NOT USE DOUBLE ASTERICKS\nHey! You're talking to my friend ${name}, who's been bedrotting and has ${timeframe} to get back on track! Here's what ${name} has to get done':\n` +
-        tasks.map((task, index) => `${index + 1}. ${task.text}`).join("\n") +
-        `\n\nShe REALLY likes Hatsune Miku, so pretending you're Hatsune Miku and including Hatsune Miku references, give them a structured, realistic schedule based on the current time and amount of time they have to work in this schedule format:\n[Introduction message (make sure you introduce yourself as Hatsune Miku)]\n[00:00-##:##: <b>Task</b>, bit of encouragement and tips on how to complete the task well] and repeat this structure. Here's an example: <b>[Greeting]</b>\n\nHere's your customized schedule: \n\n<b>00:00-00:30: Finish Math Homework,</b> Leslie-chan! Take a deep breath and dive into your math problems. Focus on one question at a time, and make sure you understand each concept before moving on to the next. You got this!\n\n<b>00:30-01:15: Watch Algorithms Class Lecture.</b> Take a short break to grab a snack or stretch, and then settle in to watch your lecture. Take notes on important points, and don't hesitate to pause the video if you need to review something.\n\n<b>01:15-03:00: Study for Linear Algebra Test.</b> You're almost there, Leslie-chan! Review your notes and textbook, and try to summarize key concepts in your own words. Make flashcards or create a concept map to help you visualize the material.\n\n[Closing message with Hatsune Miku references]`;
+      tasks.map((task, index) => `${index + 1}. ${task.text}`).join("\n") +
+      `\n\nShe REALLY likes Hatsune Miku, so pretending you're Hatsune Miku, give them a structured, realistic schedule based on the current time and amount of time they have to work in this schedule format:\n[Introduction message (make sure you introduce yourself as Hatsune Miku)]\n[00:00-##:##: <b>Task</b>, bit of encouragement and tips on how to complete the task well] and repeat this structure. Here's an example: [Greeting]\n\nHere's your customized schedule: \n\n<b>00:00-00:30: Finish Math Homework,</b> Leslie-chan! Take a deep breath and dive into your math problems. Focus on one question at a time, and make sure you understand each concept before moving on to the next. You got this!\n\n<b>00:30-01:15: Watch Algorithms Class Lecture.</b> Take a short break to grab a snack or stretch, and then settle in to watch your lecture. Take notes on important points, and don't hesitate to pause the video if you need to review something.\n\n<b>01:15-03:00: Study for Linear Algebra Test.</b> You're almost there, Leslie-chan! Review your notes and textbook, and try to summarize key concepts in your own words. Make flashcards or create a concept map to help you visualize the material.\n\nRemember, Leslie-chan, you can do it! Stay focused, take breaks when needed, and believe in yourself. You've got this!`;
     } else {
-      prompt = `ALWAYS USE <b> IF YOU NEED TO BOLD YOUR RESPONSES!!! DO NOT USE DOUBLE ASTERICKS. Hey! You're talking to my friend ${name}, who's been bedrotting and has ${timeframe} to get back on track! Here's what ${name} has to get done':\n` +
-        tasks.map((task, index) => `${index + 1}. ${task.text}`).join("\n") +
-        `\n\nIn a fun, chill tone, give them a structured, realistic schedule based on the current time and amount of time they have to work in this schedule format:\n[Introduction message]\n<b>00:00-##:##: Task</b>, bit of encouragement and tips on how to complete the task well. Repeat this structure. Here's an example: <b>[Greeting]</b>\n\nHere's your customized schedule:\n\n<b>00:00-00:20: History Studying,</b> Let's get that history test prep started! Focus on reviewing your notes, making flashcards, and going over any tricky dates or events. You got this, Bob!\n\n<b>00:20-00:45: English Essay Brainstorm,</b> Time to get those creative juices flowing! Take 10-15 minutes to brainstorm ideas for your essay, then organize your thoughts into an outline. Remember, a solid outline will make the writing process so much smoother!\n\n<b>00:45-01:10: Math Homework</b>, Math homework can be a real challenge, but you're almost there! Focus on one problem at a time, and don't be afraid to take breaks if you get stuck. You've got this, Bob! You're so close to finishing!\n\n<b>01:10-02:00: Write That Essay,</b> It's time to put your thoughts into words! Take your outline and start writing that essay. Remember to stay focused, and don't worry too much about grammar or spelling at this stage. Just get your ideas down on paper!\n\n[Closing message]`;
+      prompt = `Hey! You're talking to my friend ${name}, who's been bedrotting and has ${timeframe} to get back on track! Here's what ${name} has to get done':\n` +
+      tasks.map((task, index) => `${index + 1}. ${task.text}`).join("\n") +
+      `\n\nIn a fun, gen-z vibe, give them a structured, realistic schedule based on the current time and amount of time they have to work in this schedule format:\n[Greeting message]\n[00:00-##:##: <b>Task</b>, bit of encouragement and tips on how to complete the task well] and repeat this structure.`;
     }
 
     try {
@@ -80,38 +78,15 @@ export default function Home() {
   return (
     <div className={`h-screen snap-y snap-mandatory ${name.trim() === "" ? "overflow-hidden" : "overflow-y-scroll"}`}>
       {/* Section 1 */}
-      <section id="sec1" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
-        {/* SVG Background with exact 10px margin on all sides */}
-        <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[20px] z-0">
-          <svg
-            viewBox="0 0 1382 961"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-            preserveAspectRatio="none"
-          >
-            <path d="M0 35C0 15.6701 15.67 0 35 0H1347C1366.33 0 1382 15.67 1382 35V875H0V35Z" fill="#FFE1A8" />
-            <circle cx="86.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="259.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="432.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="605.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="778.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="951.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="1124.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-            <circle cx="1295.5" cy="874.5" r="86.5" fill="#FFE1A8" />
-          </svg>
-        </div>
-
-        {/* Foreground content */}
-        <main className="z-10 flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-          <div id="s1">
+      <section className="h-screen flex justify-center items-center snap-start">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+          <div>
             <h1>
               hello, <input type="text" id="helloText" value={name} onChange={updateName} />
             </h1>
           </div>
         </main>
       </section>
-
 
       {name.trim() !== "" && (
         <>
@@ -147,32 +122,13 @@ export default function Home() {
           </section>
 
           {/* Section 3 */}
-          <section className="h-screen flex flex-col items-center justify-center snap-start relative overflow-hidden">
-            <div className="absolute top-[20px] left-[20px] right-[20px] bottom-[0px] z-0">
-              <svg
-                viewBox="0 0 1382 997"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-full h-full"
-                preserveAspectRatio="none"
-              >
-                <rect x="1382" y="997" width="1382" height="907.778" transform="rotate(-180 1382 997)" fill="#FFE1A8" />
-                <ellipse cx="1295.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 1295.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="1122.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 1122.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="949.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 949.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="776.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 776.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="603.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 603.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="430.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 430.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="257.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 257.5 89.7403)" fill="#FFE1A8" />
-                <ellipse cx="86.5" cy="89.7403" rx="86.5" ry="89.7404" transform="rotate(-180 86.5 89.7403)" fill="#FFE1A8" />
-              </svg>
-            </div>
-            <div id="form" className="z-10">
+          <section className="h-screen flex flex-col items-center justify-center snap-start">
+            <div id="form">
               <h1 className="text-3xl">let's get back on track, {name}</h1>
 
               {/* Timeframe Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Timeframe (e.g., 2 hours)"
                 value={timeframe}
                 onChange={(e) => setTimeframe(e.target.value)}
@@ -185,7 +141,6 @@ export default function Home() {
                   {tasks.map(task => (
                     <li key={task.id} className="flex items-center space-x-2">
                       <input
-                        id="taskInput"
                         type="text"
                         value={task.text}
                         onChange={(e) => updateTaskText(task.id, e.target.value)}
@@ -201,7 +156,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -210,9 +165,8 @@ export default function Home() {
 
               {/* Submit Button */}
               <button
-                id="doneButton"
                 onClick={handleSubmit}
-                className="mt-4 p-2"
+                className="mt-4 p-2 rounded-md"
               >
                 {loading ? "Generating..." : "That's It"}
               </button>
@@ -220,41 +174,16 @@ export default function Home() {
           </section>
 
           {/* Next Section - Display Schedule */}
-          {schedule && (
-            <section id="next-section" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
-              {/* Background SVG (no top margin) */}
-              <div className="absolute top-0 left-[20px] right-[20px] bottom-0 z-0">
-                <svg
-                  viewBox="0 0 1382 1004"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full"
-                  preserveAspectRatio="none"
-                >
-                  <rect width="1382" height="788" fill="#FFE1A8" />
-                  <path
-                    d="M1382 782C1382 1213.89 1154.63 882.5 773 882.5C391.371 882.5 0 1213.89 0 782C0 350.113 309.371 0 691 0C1072.63 0 1382 350.113 1382 782Z"
-                    fill="#303036"
-                  />
-                </svg>
-              </div>
-
-              <div id="schedule" className="text-center max-w-xl z-10">
-                <h1 className="text-3xl mb-4">your schedule</h1>
-                {loading ? (
-                  <p className="text-lg">Generating your schedule...</p>
-                ) : (
-                  <p
-                    className="whitespace-pre-wrap"
-                    dangerouslySetInnerHTML={{ __html: schedule || "Your schedule will appear here." }}
-                  />
-                )}
-              </div>
-              <p className="fixed bottom-2 w-full text-center text-sm text-gray-400 z-50">
-                dev by olivia
-              </p>
-            </section>
-          )}
+          <section id="next-section" className="h-screen flex justify-center items-center snap-start">
+            <div className="text-center max-w-xl">
+              <h1 className="text-3xl mb-4">your schedule</h1>
+              {loading ? (
+                <p className="text-lg">Generating your schedule...</p>
+              ) : (
+                <p className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: schedule || "Your schedule will appear here." }}></p>
+              )}
+            </div>
+          </section>
         </>
       )}
     </div>
