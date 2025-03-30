@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-shrikhand: 'Shrikhand', cursive;
+  --font-Lalezar: 'Shanti', normal;
+}
+
+:root {
+  --background: #303036;
+  --foreground: #f1e4cc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #303036;
+    --foreground: #f1e4cc;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Shanti";
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#helloText {
+  border-bottom: 3px solid var(--background);
+}
+
+#helloText:focus {
+  outline: none;
+}
+
+#sec2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  color: var(--background);
+}
+
+#form input {
+  border-radius: 20;
+}
+
+button {
+  border: 1px solid var(--background);
+}
+
+#s1 h1 {
+  color: var(--background);
+  font-family: var(--font-shrikhand);
+}
+
+#s1 input {
+  font-weight: 100;
+}
