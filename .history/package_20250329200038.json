@@ -1,26 +1,28 @@
 {
-  "name": "rotrecovery",
-  "homepage": "https://zhangolivia7.github.io/rotrecovery",
+  "name": "rot-recovery",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "deploy": "next build && gh-pages -d out",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "next": "^15.2.4",
     "react": "^19.0.0",
+    "react-confetti": "^6.4.0",
+    "react-confetti-boom": "^1.1.2",
     "react-dom": "^19.0.0",
-    "next": "15.2.2"
+    "react-use": "^17.6.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

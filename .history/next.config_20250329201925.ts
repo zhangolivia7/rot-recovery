@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/rotrecovery',
-  assetPrefix: '/rotrecovery/',
+  basePath: '/rot-recovery',
+  assetPrefix: '/rot-recovery/',
 };
 
 module.exports = nextConfig;

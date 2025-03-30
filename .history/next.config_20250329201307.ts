@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
+
 const nextConfig = {
   output: 'export',
   distDir: 'out',
@@ -9,4 +10,5 @@ const nextConfig = {
   assetPrefix: '/rotrecovery/',
 };
 
-module.exports = nextConfig;
+
+export default nextConfig;
