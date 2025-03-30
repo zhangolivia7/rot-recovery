@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shanti&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -8,7 +8,6 @@
   --font-shrikhand: 'Shrikhand', cursive;
   --font-shanti: 'Shanti', sans-serif;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -46,7 +45,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Shanti', sans-serif;
+  font-family: var(--font-shanti);
 }
 
 h1 {
@@ -76,7 +75,7 @@ h1 {
 
 #s1 h1 {
   color: var(--background);
-  font-family: 'Shrikhand', cursive;
+  font-family: var(--font-shrikhand);
 }
 
 #submit {

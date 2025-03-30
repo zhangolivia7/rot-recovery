@@ -223,7 +223,7 @@ export default function Home() {
           {schedule && (
             <section id="next-section" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
               {/* Background SVG (no top margin) */}
-              <div className="absolute top-0 left-[20px] right-[20px] bottom-0 z-0">
+              <div className="absolute top-0 left-0 right-0 bottom-0 z-0">
                 <svg
                   viewBox="0 0 1382 1004"
                   fill="none"

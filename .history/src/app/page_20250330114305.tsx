@@ -173,7 +173,7 @@ export default function Home() {
 
               {/* Timeframe Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Timeframe (e.g., 2 hours)"
                 value={timeframe}
                 onChange={(e) => setTimeframe(e.target.value)}
@@ -201,7 +201,7 @@ export default function Home() {
 
               {/* Add Task Input */}
               <input
-                className="border p-2 w-80 mt-2 rounded-[20px]"
+                className="border p-2 w-80 mt-2"
                 placeholder="Add a task and hit enter"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
@@ -210,9 +210,8 @@ export default function Home() {
 
               {/* Submit Button */}
               <button
-                id="submit"
                 onClick={handleSubmit}
-                className="mt-4 p-2 rounded-md"
+                className="mt-4 p-2 rounded-20px"
               >
                 {loading ? "Generating..." : "That's It"}
               </button>
@@ -223,7 +222,7 @@ export default function Home() {
           {schedule && (
             <section id="next-section" className="h-screen flex justify-center items-center snap-start relative overflow-hidden">
               {/* Background SVG (no top margin) */}
-              <div className="absolute top-0 left-[20px] right-[20px] bottom-0 z-0">
+              <div className="absolute top-0 left-0 right-0 bottom-0 z-0">
                 <svg
                   viewBox="0 0 1382 1004"
                   fill="none"

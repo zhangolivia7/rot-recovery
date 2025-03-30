@@ -46,7 +46,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Shanti', sans-serif;
+  font-family: var(--font-shanti) !important;
 }
 
 h1 {
@@ -76,7 +76,7 @@ h1 {
 
 #s1 h1 {
   color: var(--background);
-  font-family: 'Shrikhand', cursive;
+  font-family: var(--font-shrikhand) !important;
 }
 
 #submit {
